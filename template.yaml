@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: 'basic-aws-apigateway-demo Sample SAM Template for basic-aws-apigateway-demo'
+Description: 'Eat Club Deals'
 
 Globals:
   Function:
