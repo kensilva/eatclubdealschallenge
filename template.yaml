@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'basic-aws-apigateway-demo Sample SAM Template for basic-aws-apigateway-demo'
+
+Globals:
+  Function:
+    Timeout: 30
+Resources:
+  EatClubDealsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: .
+      Handler: com.eatclub.ken.eatclubdeals.LambdaStreamHandler::handleRequest
+      Runtime: java17
+      MemorySize: 512
+      Environment:
+        Variables:
+          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Duser.language=en -Duser.region=AU
+      Events:
+        EatClubDealsApi:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+
