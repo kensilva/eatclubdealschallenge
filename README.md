@@ -36,3 +36,11 @@
 ##### Notes
 - *The project is based on springboot, it can also be ran/tested locally by itself using the maven task "springboot-run"*
 - *The project can also be package/build as docker and deploy with other preferred docker deployment e.g K8s or ECS etc...*
+
+#####Exposed API: Temporary Only
+###### Deals for the day
+https://46kyq2w4pi.ap-southeast-2.amazonaws.com/Stage/deals?timeOfDay=10:00am
+
+###### Peak
+https://46kyq2w496.execute-api.ap-southeast-2.amazonaws.com/Stage/deals/peak
+
